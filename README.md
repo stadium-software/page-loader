@@ -44,7 +44,7 @@ container.appendChild(indicator);
 1. Drag the "PageLoader" script into the **first position** in the Page.Load event handler
 2. Provide a value for the script *ClassName* input parameter
    1. page-loader-type-X: Replace the X with a value between 1 and 4
-   2. page-loader-type-custom: Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file or add the class *page-loader-type-custom* to the stylesheet of your application and define your own styling
+   2. page-loader-type-custom: Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file to customise the loader or add the class *page-loader-type-custom* to the stylesheet of your application and define your own styling
    3. spinner-type-X: Use any Spinner type from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
 
 ## CSS
