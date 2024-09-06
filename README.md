@@ -47,19 +47,6 @@ container.appendChild(indicator);
    2. page-loader-type-custom: Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file or add the class *page-loader-type-custom* to the stylesheet of your application and define your own styling
    3. spinner-type-X: Use any Spinner type from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
 
-## Page Loader Customisations
-1. Open the CSS file called [*page-loader-variables.css*](page-loader-variables.css) from this repo
-2. Adjust the variables in the *:root* element as you see fit
-3. Overwrite the file in the CSS folder of your application with the customised file
-
-## Using a Spinner
-1. Include both [Spinners](https://github.com/stadium-software/spinners) CSS files in the CSS folder in the EmbeddedFiles in your application
-2. Paste the link tags below into the *head* property of your application
-```html
-<link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners.css">
-<link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners-variables.css">
-``` 
-
 ## CSS
 The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file. 
 
@@ -73,6 +60,23 @@ The CSS below is required for the correct functioning of the module. Some elemen
 
 ### CSS Upgrading
 To upgrade the CSS in this module, follow the [steps outlined in this repo](https://github.com/stadium-software/samples-upgrading)
+
+## Page Loader Customisations
+1. Open the CSS file called [*page-loader-variables.css*](page-loader-variables.css) from this repo
+2. Adjust the variables in the *:root* element as you see fit
+3. Overwrite the file in the CSS folder of your application with the customised file
+
+## Using a Spinner
+1. Include both [Spinners](https://github.com/stadium-software/spinners) CSS files in the CSS folder in the EmbeddedFiles in your application
+2. Paste the link tags below into the *head* property of your application
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners.css">
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners-variables.css">
+``` 
+
+## Getting a Base64 Encoded Background Image
+1. Some icon sites (e.g. https://icones.js.org/collection/all) provide this as a standard download option (select "Data Url" from the option buttons)
+2. Any image can also be converted to a Base64 encoded string in a number of sites (e.g. https://base64.guru/ - choose "Data URI" or "CSS Background" from the "Output Options" dropdown and use this in the [*page-loader-variables.css*](page-loader-variables.css) file)
 
 ## Working with Stadium Repos
 Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. How to use and update application repos is described here 
