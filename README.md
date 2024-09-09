@@ -15,14 +15,14 @@ Initial 1.0
 ## Global Script
 1. Create a Global Script called "PageLoader"
 2. Add the input parameters below to the Global Script
-   1. ClassName
+   1. Type
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
 /* Stadium Script v1.0 https://github.com/stadium-software/page-loader */
-let classname = ~.Parameters.Input.ClassName;
+let classname = ~.Parameters.Input.Type;
 if (!classname) { 
-    console.error("The 'ClassName' parameter is required");
+    console.error("The 'Type' parameter is required");
     return false;
 }
 let container = document.querySelector("#busy-indicator");
@@ -41,11 +41,13 @@ container.appendChild(indicator);
 ```
 
 ## Page.Load
-1. Drag the "PageLoader" script into the **first position** in the Page.Load event handler
-2. Provide a value for the script *ClassName* input parameter
-   1. page-loader-type-X: Replace the X with a value between 1 and 4
-   2. page-loader-type-custom: Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file to customise the loader or add the class *page-loader-type-custom* to the stylesheet of your application and define your own styling
-   3. spinner-type-X: Use any Spinner type from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
+1. Drag the "PageLoader" script into the **first position (!!)** in the Page.Load event handler
+2. Provide a value for the script *Type* input parameter
+   1. page-loader-classic-bar (or just 'classic-bar'): Customise the standard Stadium bar loader
+   2. page-loader-icon: Add an animated icon (or choose one from the list below) and place it somewhere on the screen
+   3. page-loader-custom: Animate your own icon
+   4. spinner-type-X: [Use any Spinner](#using-a-spinner) from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
+3. Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file to customise the loader ([see below](#page-loader-customisations))
 
 ## CSS
 The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file. 
@@ -72,11 +74,19 @@ To upgrade the CSS in this module, follow the [steps outlined in this repo](http
 ```html
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners.css">
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners-variables.css">
-``` 
+```
+3. Follow the instructions in the [Page.Load](#page.load) section
 
-## Getting a Base64 Encoded Background Image
+## Base64 Encoded Images
+To display icons, this module uses Base64 encoded image strings. Using this method has the advantage that images do not have to be included in the application as separate files as they are directly inserted into the CSS stylesheet. Here is an example of a Base64 encoded image CSS reference
+```css
+.icon {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0ibG9nbyIgdmlld0JveD0iNTEwLjk4OSAyMjcuMTM4NSA1NC4zOTUgNDUuNzIyNSIgd2lkdGg9IjU0LjM5NSIgaGVpZ2h0PSI0NS43MjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSI0MCIgeTI9IjQwIiBzdHJva2U9InJlZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPg0KPC9zdmc+");
+}
+```
+**Base64 Encoding**
 1. Some icon sites (e.g. https://icones.js.org/collection/all) provide this as a standard download option (select "Data Url" from the option buttons)
-2. Any image can also be converted to a Base64 encoded string in a number of sites (e.g. https://base64.guru/ - choose "Data URI" or "CSS Background" from the "Output Options" dropdown and use this in the [*page-loader-variables.css*](page-loader-variables.css) file)
+2. Any image can also be converted to a Base64 encoded string in a number of sites (e.g. https://base64.guru/ - choose "Data URI" or "CSS Background" from the "Output options" dropdown and use this in the [*page-loader-variables.css*](page-loader-variables.css) file)
 
 ## Working with Stadium Repos
 Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. How to use and update application repos is described here 

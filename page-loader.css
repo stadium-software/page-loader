@@ -1,6 +1,6 @@
 
 /*--------------------------------------------------------*/
-#busy-indicator:has([class^="spinner-type-"]) {
+#busy-indicator.stadium-spinner {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,244 +8,175 @@
     width: 100vw;
     background-color: var(--page-loader-overlay-background-color, var(--MODAL-OVERLAY-COLOR));
     z-index: 1010;
-    .busy-indicator-wrapper {
+
+    .busy-indicator {
         height: 100%;
         width: 100%;
         display: grid;
         place-items: center;
-    }
-    .busy-indicator {
         position: static;
-        top: unset;
-        left: unset;
-        height: auto;
-        width: auto;
         background-color: transparent;
         animation: none;
     }
 }
 
 /*--------------------------------------------------------*/
-#app:has(.page-loader-type-custom) {
+#busy-indicator:has(.page-loader-custom) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    z-index: 1010;
 
-    #busy-indicator {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 0;
-        z-index: 1010;
-
-        .busy-indicator {
-            position: static;
-            top: unset;
-            left: unset;
-            bottom: unset;
-            animation: none;
-        }
-
-        .page-loader-type-custom {
-            position: fixed;
-            top: var(--page-loader-type-custom-top-position, 2px);
-            right: var(--page-loader-type-custom-right-position, 36px);
-            bottom: var(--page-loader-type-custom-bottom-position, unset);
-            left: var(--page-loader-type-custom-left-position, unset);
-            height: var(--page-loader-type-custom-height, 36px);
-            width: var(--page-loader-type-custom-width, 36px);
-            background-image: var(--page-loader-type-custom-image-data-url);
-            background-repeat: no-repeat;
-            background-size: var(--page-loader-type-custom-image-size, 30px);
-            background-position: center;
-            background-color: var(--page-loader-type-custom-background-color, transparent);
-            animation: var(--page-loader-type-custom-animation, none) ;
-        }
-    }
-}
-
-/*--------------------------------------------------------*/
-#app:has(.page-loader-type-1) {
-
-    #busy-indicator {
-        position: fixed;
+    .busy-indicator {
+        position: static;
         top: unset;
+        left: unset;
+        bottom: unset;
+        animation: none;
+        background-color: transparent;
+    }
+
+    .page-loader-custom {
+        position: fixed;
+        top: var(--page-loader-custom-top-position, unset);
+        right: var(--page-loader-custom-right-position, unset);
+        bottom: var(--page-loader-custom-bottom-position, unset);
+        left: var(--page-loader-custom-left-position, unset);
+        height: var(--page-loader-custom-height, 36px);
+        width: var(--page-loader-custom-width, 36px);
+        background-image: var(--page-loader-custom-image-data-url, url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' %3E%3Cg%3E%3Ccircle cx='3' cy='12' r='2' fill='currentColor' /%3E%3Ccircle cx='21' cy='12' r='2' fill='currentColor' /%3E%3Ccircle cx='12' cy='21' r='2' fill='currentColor' /%3E%3Ccircle cx='12' cy='3' r='2' fill='currentColor' /%3E%3Ccircle cx='5.64' cy='5.64' r='2' fill='currentColor' /%3E%3Ccircle cx='18.36' cy='18.36' r='2' fill='currentColor' /%3E%3Ccircle cx='5.64' cy='18.36' r='2' fill='currentColor' /%3E%3Ccircle cx='18.36' cy='5.64' r='2' fill='currentColor' /%3E%3CanimateTransform attributeName='transform' dur='1.5s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12' /%3E%3C/g%3E%3C/svg%3E"));
+        background-repeat: no-repeat;
+        background-size: var(--page-loader-custom-image-size, 30px);
+        background-position: center;
+        background-color: var(--page-loader-custom-background-color, transparent);
+        animation: var(--page-loader-custom-animation, none);
+    }
+}
+
+/*--------------------------------------------------------*/
+#busy-indicator:has(.page-loader-type-classic-bar),
+#busy-indicator:has(.classic-bar) {
+    position: fixed;
+    top: unset;
+    left: 0;
+    height: 0;
+    bottom: 0;
+    z-index: 1010;
+
+    .busy-indicator {
+        position: static;
+        top: unset;
+        left: unset;
+        animation: none;
+        background-color: transparent;
+    }
+
+    .page-loader-type-classic-bar,
+    .classic-bar {
+        position: fixed;
+        height: var(--page-loader-type-classic-bar-height, 10px);
+        width: var(--page-loader-type-classic-bar-width, 200px);
+        background-image: var(--page-loader-type-classic-bar-image-data-url, none);
+        background-repeat: no-repeat;
+        background-size: var(--page-loader-type-classic-bar-image-size, 30px);
+        background-position: center;
+        background-color: var(--page-loader-type-classic-bar-background-color, var(--MAIN-THEME-COLOR));
+        animation: var(--page-loader-type-classic-bar-location, bottom) 2s ease-out infinite;
+    }
+}
+
+@keyframes top {
+    0% {
         left: 0;
-        height: 0;
+        top: 0;
+    }
+    50% {
+        left: calc(100vw - var(--page-loader-type-classic-bar-width, 200px));
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes right {
+    0% {
+        right: 0;
+        top: 0;
+    }
+
+    50% {
+        top: calc(100vh - var(--page-loader-type-classic-bar-height, 200px));
+    }
+
+    100% {
+        right: 0;
+        top: 0;
+    }
+}
+@keyframes bottom {
+    0% {
+        left: 0;
         bottom: 0;
-        z-index: 1010;
-
-        .busy-indicator {
-            position: static;
-            top: unset;
-            left: unset;
-            animation: none;
-        }
-        .page-loader-type-1 {
-            position: fixed;
-            height: var(--page-loader-type-1-bar-height, 10px);
-            width: var(--page-loader-type-1-bar-width, 200px);
-            bottom: 0;
-            top: calc(100vh - var(--page-loader-type-1-bar-height, 10px));
-            background-image: var(--page-loader-type-1-image-data-url);
-            background-repeat: no-repeat;
-            background-size: var(--page-loader-type-1-image-size, 30px);
-            background-position: center;
-            background-color: var(--page-loader-type-1-background-color, var(--MAIN-THEME-COLOR));
-            animation: var(--page-loader-type-1-animation, loadingBarAnimation-1 2s ease-out infinite);
-        }
-    }
-}
-@keyframes loadingBarAnimation-1 {
-    0% {
-        left: 0;
     }
 
     50% {
-        left: calc(100% - var(--page-loader-type-1-bar-width, 200px));
+        left: calc(100vw - var(--page-loader-type-classic-bar-width, 200px));
     }
 
     100% {
         left: 0;
+        bottom: 0;
     }
 }
+@keyframes left {
+    0% {
+        left: 0;
+        top: 0;
+    }
 
+    50% {
+        top: calc(100vh - var(--page-loader-type-classic-bar-height, 200px));
+    }
+
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
 /*--------------------------------------------------------*/
-#app:has(.page-loader-type-2) {
 
-    #busy-indicator {
+#busy-indicator:has(.page-loader-icon) {
+    position: fixed;
+    top: unset;
+    left: 0;
+    height: 0;
+    bottom: 0;
+    z-index: 1010;
+
+    .busy-indicator {
+        position: static;
+        top: unset;
+        left: unset;
+        animation: none;
+        background-color: transparent;
+    }
+
+    .page-loader-icon {
         position: fixed;
-        top: 0;
-        left: 0;
-        height: 0;
-        z-index: 1010;
-
-        .busy-indicator {
-            position: static;
-            top: unset;
-            left: unset;
-            animation: none;
-        }
-
-        .page-loader-type-2 {
-            position: fixed;
-            top: 0;
-            bottom: unset;
-            height: var(--page-loader-type-2-bar-height, 10px);
-            width: var(--page-loader-type-2-bar-width, 200px);
-            background-image: var(--page-loader-type-2-image-data-url);
-            background-repeat: no-repeat;
-            background-size: var(--page-loader-type-2-image-size, 30px);
-            background-position: center;
-            background-color: var(--page-loader-type-2-background-color, var(--MAIN-THEME-COLOR));
-            animation: var(--page-loader-type-2-animation, loadingBarAnimation-2 2s ease-out infinite);
-        }
+        top: var(--page-loader-icon-top-position, unset);
+        right: var(--page-loader-icon-right-position, unset);
+        bottom: var(--page-loader-icon-bottom-position, unset);
+        left: var(--page-loader-icon-left-position, unset);
+        height: var(--page-loader-icon-height, 36px);
+        width: var(--page-loader-icon-width, 36px);
+        background-image: var(--page-loader-icon-data-url, url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' %3E%3Cg%3E%3Ccircle cx='3' cy='12' r='2' fill='currentColor' /%3E%3Ccircle cx='21' cy='12' r='2' fill='currentColor' /%3E%3Ccircle cx='12' cy='21' r='2' fill='currentColor' /%3E%3Ccircle cx='12' cy='3' r='2' fill='currentColor' /%3E%3Ccircle cx='5.64' cy='5.64' r='2' fill='currentColor' /%3E%3Ccircle cx='18.36' cy='18.36' r='2' fill='currentColor' /%3E%3Ccircle cx='5.64' cy='18.36' r='2' fill='currentColor' /%3E%3Ccircle cx='18.36' cy='5.64' r='2' fill='currentColor' /%3E%3CanimateTransform attributeName='transform' dur='1.5s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12' /%3E%3C/g%3E%3C/svg%3E"));
+        background-repeat: no-repeat;
+        background-size: var(--page-loader-icon-size, 30px);
+        background-position: center;
+        background-color: var(--page-loader-icon-background-color, transparent);
+        animation: none;
     }
 }
-
-@keyframes loadingBarAnimation-2 {
-    0% {
-        left: 0;
-    }
-
-    50% {
-        left: calc(100% - var(--page-loader-type-2-bar-width, 200px));
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
 /*--------------------------------------------------------*/
-#app:has(.page-loader-type-3) {
-
-    #busy-indicator {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 0;
-        z-index: 1010;
-
-        .busy-indicator {
-            position: static;
-            top: unset;
-            left: unset;
-            animation: none;
-        }
-
-        .page-loader-type-3 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: unset;
-            width: var(--page-loader-type-3-bar-width, 10px);
-            height: var(--page-loader-type-3-bar-height, 200px);
-            background-image: var(--page-loader-type-3-image-data-url);
-            background-repeat: no-repeat;
-            background-size: var(--page-loader-type-3-image-size, 30px);
-            background-position: center;
-            background-color: var(--page-loader-type-3-background-color, var(--MAIN-THEME-COLOR));
-            animation: var(--page-loader-type-3-animation, loadingBarAnimation-3 2s ease-out infinite);
-        }
-    }
-}
-
-@keyframes loadingBarAnimation-3 {
-    0% {
-        top: 0;
-    }
-
-    50% {
-        top: calc(100% - var(--page-loader-type-3-bar-height, 200px));
-    }
-
-    100% {
-        top: 0;
-    }
-}
-
-/*--------------------------------------------------------*/
-#app:has(.page-loader-type-4) {
-
-    #busy-indicator {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 0;
-        z-index: 1010;
-
-        .busy-indicator {
-            position: static;
-            top: unset;
-            left: unset;
-            animation: none;
-        }
-
-        .page-loader-type-4 {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: unset;
-            width: var(--page-loader-type-4-bar-width, 10px);
-            height: var(--page-loader-type-4-bar-height, 200px);
-            background-image: var(--page-loader-type-4-image-data-url);
-            background-repeat: no-repeat;
-            background-size: var(--page-loader-type-4-image-size, 30px);
-            background-position: center;
-            background-color: var(--page-loader-type-4-background-color, var(--MAIN-THEME-COLOR));
-            animation: var(--page-loader-type-4-animation, loadingBarAnimation-4 2s ease-out infinite);
-        }
-    }
-}
-
-@keyframes loadingBarAnimation-4 {
-    0% {
-        top: 0;
-    }
-
-    50% {
-        top: calc(100% - var(--page-loader-type-4-bar-width, 200px));
-    }
-
-    100% {
-        top: 0;
-    }
-}
