@@ -78,15 +78,11 @@ To upgrade the CSS in this module, follow the [steps outlined in this repo](http
 3. Follow the instructions in the [Page.Load](#page.load) section
 
 ## Base64 Encoded Images
-To display icons, this module uses Base64 encoded image strings. Using this method has the advantage that images do not have to be included in the application as separate files as they are directly inserted into the CSS stylesheet. Here is an example of a Base64 encoded image CSS reference
-```css
-.icon {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0ibG9nbyIgdmlld0JveD0iNTEwLjk4OSAyMjcuMTM4NSA1NC4zOTUgNDUuNzIyNSIgd2lkdGg9IjU0LjM5NSIgaGVpZ2h0PSI0NS43MjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSI0MCIgeTI9IjQwIiBzdHJva2U9InJlZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPg0KPC9zdmc+");
-}
-```
+To display icons, this module uses Base64 encoded image strings. Using this method has the advantage that images do not have to be included in the application as separate files as they are directly inserted into the CSS stylesheet
+
 **Base64 Encoding**
-1. Some icon sites (e.g. https://icones.js.org/collection/all) provide this as a standard download option (select "Data Url" from the option buttons)
-2. Any image can also be converted to a Base64 encoded string in a number of sites (e.g. https://base64.guru/ - choose "Data URI" or "CSS Background" from the "Output options" dropdown and use this in the [*page-loader-variables.css*](page-loader-variables.css) file)
+1. Some icon sites (e.g. https://icones.js.org/collection/all) provide this as a standard download option (select "Data Url" from the option buttons in this example)
+2. Any image can also be converted to a Base64 encoded string in a number of sites (e.g. https://base64.guru/ - choose "Data URI" or "CSS Background" from the "Output options" dropdown)
 
 ## Icons
 <div style="display: flex;flex-wrap: wrap; flex-direction: row;">
