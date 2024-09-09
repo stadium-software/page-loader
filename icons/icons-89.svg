@@ -1,0 +1,69 @@
+<svg id="logo" viewBox="510.989 227.1385 54.395 45.7225" width="54.395" height="45.722" xmlns="http://www.w3.org/2000/svg">
+<style>
+		#logo {
+			animation: pulsate 1.4s infinite ease;
+		}
+		#top {
+			animation: color1 3s infinite linear;
+		}
+		#middle {
+			animation: color2 3s infinite linear;
+		}
+		#bottom {
+			animation: color3 3s infinite linear;
+		}
+		@keyframes pulsate {
+		  0%   { transform: scale(0.5);}
+		  12%  { transform: scale(0.9); }
+		  16%  { transform: scale(0.8); }
+		  26%  { transform: scale(1); }
+		  66%  { transform: scale(0.5); }
+		  100% { transform: scale(0.49); }
+		}
+		@keyframes color1 {
+		  0% {
+			fill:#FAB50D;
+		  }
+		  33% {
+			fill:#EC6807;
+		  }
+		  66% {
+			fill:#010202;
+		  }
+		  100% {
+			fill:#FAB50D;
+		  }
+		}
+		@keyframes color2 {
+		  0% {
+			fill:#EC6807;
+		  }
+		  33% {
+			fill:#010202;
+		  }
+		  66% {
+			fill:#FAB50D;
+		  }
+		  100% {
+			fill:#EC6807;
+		  }
+		}
+		@keyframes color3 {
+		  0% {
+			fill:#010202;
+		  }
+		  33% {
+			fill:#FAB50D;
+		  }
+		  66% {
+			fill:#EC6807;
+		  }
+		  100% {
+			fill:#010202;
+		  }
+		}
+	</style>
+    <path id="middle" fill="#EC6807" d="M 565.377 255.897 L 565.377 243.813 C 565.377 240.382 562.606 238.88 562.606 238.88 C 562.606 238.88 563.51 239.391 563.51 240.339 C 563.51 241.288 562.54 241.849 562.54 241.849 L 547.807 249.91 L 547.807 250.099 L 562.446 258.058 C 563.563 258.683 563.511 259.57 563.511 259.57 C 563.511 260.484 562.446 261.232 562.446 261.232 C 565.67 259.148 565.377 255.897 565.377 255.897" style="animation-duration: 3s; animation-iteration-count: infinite; animation-name: color2; animation-timing-function: linear;"/>
+    <path id="top" fill="#FAB50D" d="M 547.81 250.007 L 515.789 232.537 C 515.789 232.537 511.229 230.187 510.989 227.147 L 534.599 227.147 C 534.599 227.147 538.129 227.037 540.557 227.607 C 540.557 227.607 542.869 228.037 544.557 228.957 L 562.247 238.627 C 562.247 238.627 563.637 239.307 563.637 240.437 C 563.639 240.437 563.768 241.317 562.248 242.147 C 560.778 242.959 548.672 249.538 547.852 249.983" style="animation-duration: 3s; animation-iteration-count: infinite; animation-name: color1; animation-timing-function: linear;"/>
+    <path id="bottom" fill="#010202" d="M 547.806 250.007 C 547.806 250.007 560.722 257.028 562.245 257.861 C 563.768 258.691 563.63 259.572 563.63 259.572 C 563.63 260.695 562.245 261.384 562.245 261.384 L 544.556 271.045 C 542.87 271.965 540.56 272.399 540.56 272.399 C 538.128 272.964 534.593 272.852 534.593 272.852 L 510.99 272.852 C 511.231 269.813 515.784 267.467 515.784 267.467 L 547.806 250.007 Z" style="animation-duration: 3s; animation-iteration-count: infinite; animation-name: color3; animation-timing-function: linear;"/>
+</svg>
