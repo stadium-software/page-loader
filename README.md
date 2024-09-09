@@ -69,7 +69,7 @@ To upgrade the CSS in this module, follow the [steps outlined in this repo](http
 3. Overwrite the file in the CSS folder of your application with the customised file
 
 ## Icons
-Use any of these icons to customise the 'page-loader-icon' or the 'page-loader-custom' option ([see above](#page.load)). Alternatively, [create your own base64 encoded image](#base64-encoded-images)
+Use any of these icons to customise the 'page-loader-icon' or the 'page-loader-custom' option ([see above](#pageload)). Alternatively, [create your own base64 encoded image](#base64-encoded-images)
 
 <img src="icons/icon-84.svg">
 
@@ -99,7 +99,7 @@ Spinners cover the entire page while any party of it is loading. This makes it v
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners.css">
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners-variables.css">
 ```
-3. Follow the instructions in the [Page.Load](#page.load) section
+3. Follow the instructions in the [Page.Load](#pageload) section
 
 ## Working with Stadium Repos
 Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. How to use and update application repos is described here 
