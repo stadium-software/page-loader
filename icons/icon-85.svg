@@ -1,0 +1,59 @@
+<svg viewBox="0.249 1.0045 54.3949 45.7226" width="54.395" height="45.723" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		#top {
+			animation: color1 3s infinite linear;
+		}
+		#middle {
+			animation: color2 3s infinite linear;
+		}
+		#bottom {
+			animation: color3 3s infinite linear;
+		}
+		@keyframes color1 {
+		  0% {
+			fill:#FAB50D;
+		  }
+		  33% {
+			fill:#EC6807;
+		  }
+		  66% {
+			fill:#010202;
+		  }
+		  100% {
+			fill:#FAB50D;
+		  }
+		}
+		@keyframes color2 {
+		  0% {
+			fill:#EC6807;
+		  }
+		  33% {
+			fill:#010202;
+		  }
+		  66% {
+			fill:#FAB50D;
+		  }
+		  100% {
+			fill:#EC6807;
+		  }
+		}
+		@keyframes color3 {
+		  0% {
+			fill:#010202;
+		  }
+		  33% {
+			fill:#FAB50D;
+		  }
+		  66% {
+			fill:#EC6807;
+		  }
+		  100% {
+			fill:#010202;
+		  }
+		}
+	</style>
+
+  <path id="middle" fill="#EC6807" d="M 54.637 29.763 L 54.637 17.679 C 54.637 14.248 51.866 12.746 51.866 12.746 C 51.866 12.746 52.77 13.257 52.77 14.205 C 52.77 15.154 51.8 15.715 51.8 15.715 L 37.067 23.776 L 37.067 23.965 L 51.706 31.924 C 52.823 32.549 52.771 33.436 52.771 33.436 C 52.771 34.35 51.706 35.098 51.706 35.098 C 54.93 33.014 54.637 29.763 54.637 29.763" style="animation-duration: 4s; animation-iteration-count: infinite; animation-name: color2; animation-timing-function: linear;"/>
+  <path id="top" fill="#FAB50D" d="M 37.07 23.873 L 5.049 6.403 C 5.049 6.403 0.489 4.053 0.249 1.013 L 23.859 1.013 C 23.859 1.013 27.389 0.903 29.817 1.473 C 29.817 1.473 32.129 1.903 33.817 2.823 L 51.507 12.493 C 51.507 12.493 52.897 13.173 52.897 14.303 C 52.899 14.303 53.028 15.183 51.508 16.013 C 50.038 16.825 37.932 23.404 37.112 23.849" style="animation-duration: 4s; animation-iteration-count: infinite; animation-name: color1; animation-timing-function: linear;"/>
+  <path id="bottom" fill="#010202" d="M 37.066 23.873 C 37.066 23.873 49.982 30.894 51.505 31.727 C 53.028 32.557 52.89 33.438 52.89 33.438 C 52.89 34.561 51.505 35.25 51.505 35.25 L 33.816 44.911 C 32.13 45.831 29.82 46.265 29.82 46.265 C 27.388 46.83 23.853 46.718 23.853 46.718 L 0.25 46.718 C 0.491 43.679 5.044 41.333 5.044 41.333 L 37.066 23.873 Z" style="animation-duration: 4s; animation-iteration-count: infinite; animation-name: color3; animation-timing-function: linear;"/>
+</svg>
