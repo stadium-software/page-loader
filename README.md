@@ -83,13 +83,13 @@ To display your own icon, you need to Base64-encode the image
 ## Using a Spinner
 Spinners cover the entire page while any party of it is loading. This makes it very obvious to the users that the page is loading and also prevents them from interacting with the UI. To use a Spinner:
 
-1. Include both [Spinners](https://github.com/stadium-software/spinners) CSS files in the CSS folder in the EmbeddedFiles in your application
-2. Paste the link tags below into the *head* property of your application
+1. Follow the instructions in the [Page.Load](#pageload) section AND
+2. Include both [Spinners](https://github.com/stadium-software/spinners) CSS files in the CSS folder in the EmbeddedFiles in your application
+3. Paste the link tags below into the *head* property of your application
 ```html
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners.css">
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/spinners-variables.css">
 ```
-3. Follow the instructions in the [Page.Load](#pageload) section
 
 ## Working with Stadium Repos
 Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. How to use and update application repos is described here 
