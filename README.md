@@ -1,6 +1,6 @@
 # Custom Page Loading Indicator <!-- omit in toc -->
 
-A subtle animation at the bottom of the page just above the footer element indicates to the user that the page is busy fetching data from a database or web service. This repo allows you to customise the standard loader bar, use a spinner from the library of [Spinners](https://github.com/stadium-software/spinners) or define a custom loader in CSS. 
+A subtle animation at the bottom of the page just above the footer element indicates to the user that the page is busy fetching data from a database or web service. This repo allows you to customise the loader in a variety of ways. 
 
 https://github.com/user-attachments/assets/fdb090ee-ce30-43f9-a181-9b5b21a3abaa
 
@@ -25,6 +25,7 @@ if (!classname) {
     console.error("The 'Type' parameter is required");
     return false;
 }
+if (!classname.startsWith("spinner-type-")) classname = "page-loader-" + classname;
 let container = document.querySelector("#busy-indicator");
 let indicator = container.querySelector(".busy-indicator");
 let inner = indicator.querySelector(".busy-indicator-inner");
@@ -40,15 +41,16 @@ indicator.appendChild(inner);
 container.appendChild(indicator);
 ```
 
-## Page.Load
-1. Drag the "PageLoader" script into the **first position (!!)** in the Page.Load event handler
-2. Provide a value for the script *Type* input parameter
-   1. page-loader-classic-bar (or just 'classic-bar'): Customise the standard Stadium bar loader
-   2. page-loader-icon-X: Find an animated icon in the image below and place it somewhere on the screen
-   3. page-loader-icon: Add your own animated icon and place it somewhere on the screen
-   4. page-loader-custom: Choose and animate your own icon by writing a CSS animation
+## StartPage or Template Page.Load
+1. Drag the "PageLoader" script into the **first position (!!)** in the Page.Load event handler of the StartPage or the StartPage Template. This will apply the specified loader across the entire application. 
+2. Drag the "PageLoader" script into the **first position (!!)** in the Page.Load event handler of any other page or template to change the loader. 
+3. Provide a value for the script *Type* input parameter
+   1. classic-bar: Customise the standard Stadium bar loader
+   2. icon-X: Find an animated icon in the image below and place it somewhere on the screen
+   3. icon: Add your own animated icon and place it somewhere on the screen
+   4. custom: Choose and animate your own icon by writing a CSS animation
    5. spinner-type-X: [Use any Spinner](#using-a-spinner) from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
-3. Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file to customise the loader ([see below](#page-loader-customisations))
+4. Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file to customise the loader ([see below](#page-loader-customisations))
 
 ![](images/LoaderOptions.gif)
 

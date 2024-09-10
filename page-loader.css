@@ -56,7 +56,7 @@
 }
 
 /*--------------------------------------------------------*/
-#busy-indicator:has(.page-loader-type-classic-bar),
+#busy-indicator:has(.page-loader-classic-bar),
 #busy-indicator:has(.classic-bar) {
     position: fixed;
     top: unset;
@@ -73,18 +73,18 @@
         background-color: transparent;
     }
 
-    .page-loader-type-classic-bar,
+    .page-loader-classic-bar,
     .classic-bar {
         position: fixed;
-        height: var(--page-loader-type-classic-bar-height, 10px);
-        width: var(--page-loader-type-classic-bar-width, 200px);
-        background-image: var(--page-loader-type-classic-bar-image-data-url, none);
+        height: var(--page-loader-classic-bar-height, 10px);
+        width: var(--page-loader-classic-bar-width, 200px);
+        background-image: var(--page-loader-classic-bar-image-data-url, none);
         background-repeat: no-repeat;
-        background-size: var(--page-loader-type-classic-bar-image-size, 30px);
+        background-size: var(--page-loader-classic-bar-image-size, 30px);
         background-position: center;
         background-size: var(--page-loader-icon-size, 26px);
-        background-color: var(--page-loader-type-classic-bar-background-color, var(--MAIN-THEME-COLOR));
-        animation: var(--page-loader-type-classic-bar-location, bottom) 2s ease-out infinite;
+        background-color: var(--page-loader-classic-bar-background-color, var(--MAIN-THEME-COLOR));
+        animation: var(--page-loader-classic-bar-location, bottom) 2s ease-out infinite;
     }
 }
 
@@ -94,7 +94,7 @@
         top: 0;
     }
     50% {
-        left: calc(100vw - var(--page-loader-type-classic-bar-width, 200px));
+        left: calc(100vw - var(--page-loader-classic-bar-width, 200px));
     }
     100% {
         left: 0;
@@ -109,7 +109,7 @@
     }
 
     50% {
-        top: calc(100vh - var(--page-loader-type-classic-bar-height, 200px));
+        top: calc(100vh - var(--page-loader-classic-bar-height, 200px));
     }
 
     100% {
@@ -124,7 +124,7 @@
     }
 
     50% {
-        left: calc(100vw - var(--page-loader-type-classic-bar-width, 200px));
+        left: calc(100vw - var(--page-loader-classic-bar-width, 200px));
     }
 
     100% {
@@ -139,7 +139,7 @@
     }
 
     50% {
-        top: calc(100vh - var(--page-loader-type-classic-bar-height, 200px));
+        top: calc(100vh - var(--page-loader-classic-bar-height, 200px));
     }
 
     100% {

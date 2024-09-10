@@ -1,13 +1,13 @@
 :root {
     /*---classic-bar-----------------------------------------------------*/
-    /* type input parameter: 'classic-bar' or 'page-loader-type-classic-bar' */
-    --page-loader-type-classic-bar-width: 200px;
-    --page-loader-type-classic-bar-height: 10px;
-    --page-loader-type-classic-bar-background-color: inherit;
-    --page-loader-type-classic-bar-image-data-url: none;
-    --page-loader-type-classic-bar-image-size: 30px;
-    --page-loader-type-classic-bar-background-color: #00a1e1;
-    --page-loader-type-classic-bar-location: bottom; /*top, right, bottom, left*/
+    /* type input parameter: 'classic-bar' or 'page-loader-classic-bar' */
+    --page-loader-classic-bar-width: 200px;
+    --page-loader-classic-bar-height: 10px;
+    --page-loader-classic-bar-background-color: inherit;
+    --page-loader-classic-bar-image-data-url: none;
+    --page-loader-classic-bar-image-size: 30px;
+    --page-loader-classic-bar-background-color: #00a1e1;
+    --page-loader-classic-bar-location: bottom; /*top, right, bottom, left*/
 
     /*---icon-----------------------------------------------------*/
     /* type input parameter: 'page-loader-icon' */
