@@ -46,7 +46,7 @@ container.appendChild(indicator);
 2. Drag the "PageLoader" script into the **first position (!!)** in the Page.Load event handler of any other page or template to change the loader. 
 3. Provide a value for the script *Type* input parameter
    1. classic-bar: Customise the standard Stadium bar loader
-   2. icon-X: Find an animated icon in the image below and place it somewhere on the screen
+   2. icon-X: Find an animated icon in the image below and place it somewhere on the screen by adjusting the '--page-loader-icon-top-position', '--page-loader-icon-right-position', '--page-loader-icon-bottom-position' and '--page-loader-icon-left-position' variables in the [*page-loader-variables.css*](page-loader-variables.css) file
    3. icon: Add your own animated icon and place it somewhere on the screen
    4. custom: Choose and animate your own icon by writing a CSS animation
    5. spinner-type-X: [Use any Spinner](#using-a-spinner) from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
