@@ -47,8 +47,8 @@ container.appendChild(indicator);
 3. Provide a value for the script *Type* input parameter
    1. classic-bar: Customise the standard Stadium bar loader
    2. icon-X: Use an animated icon shown the image below
-   3. icon: Use your own animated icon
-   4. custom: Choose and animate your own icon by writing a CSS animation
+   3. icon: Use your [own animated icon](#adding-your-own-icon)
+   4. custom: Choose and animate your own icon by writing a CSS animation (see sample application)
    5. spinner-type-X: [Use any Spinner](#using-a-spinner) from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
 4. Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file to customise the loader ([see below](#page-loader-customisations))
 
