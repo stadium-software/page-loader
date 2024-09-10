@@ -2,7 +2,7 @@
 
 A subtle animation at the bottom of the page just above the footer element indicates to the user that the page is busy fetching data from a database or web service. This repo allows you to customise the standard loader bar, use a spinner from the library of [Spinners](https://github.com/stadium-software/spinners) or define a custom loader in CSS. 
 
-https://github.com/user-attachments/assets/39fa9bca-d127-43f4-accc-10275cce312d
+https://github.com/user-attachments/assets/fdb090ee-ce30-43f9-a181-9b5b21a3abaa
 
 # Version
 Initial 1.0
