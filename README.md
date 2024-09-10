@@ -73,12 +73,12 @@ To upgrade the CSS in this module, follow the [steps outlined in this repo](http
 2. Adjust the variables in the *:root* element as you see fit
 3. Overwrite the file in the CSS folder of your application with the customised file
 
-## Base64 Encoded Images
-To display icons, this module uses Base64 encoded image strings. Using this method has the advantage that images do not have to be included in the application as separate files as they are directly inserted into the CSS stylesheet
+## Adding your own icon
+To display your own icon, you need to Base64-encode the image
 
 **Base64 Encoding**
 1. Some icon sites (e.g. https://icones.js.org/collection/all) provide this as a standard download option (select "Data Url" from the option buttons in this example)
-2. Any image can also be converted to a Base64 encoded string in a number of sites (e.g. https://base64.guru/ - choose "Data URI" or "CSS Background" from the "Output options" dropdown)
+2. Convert any image to a Base64 encoded string here https://base64.guru/ (choose "Data URI" or "CSS Background" from the "Output options" dropdown)
 
 ## Using a Spinner
 Spinners cover the entire page while any party of it is loading. This makes it very obvious to the users that the page is loading and also prevents them from interacting with the UI. To use a Spinner:
