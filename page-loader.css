@@ -49,7 +49,6 @@
         background-repeat: no-repeat;
         background-size: var(--page-loader-custom-image-size, 30px);
         background-position: center;
-        background-size: var(--page-loader-icon-size, 26px);
         background-color: var(--page-loader-custom-background-color, transparent);
         animation: var(--page-loader-custom-animation, none);
     }
