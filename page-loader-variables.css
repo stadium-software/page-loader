@@ -3,7 +3,6 @@
     /* type input parameter: 'classic-bar' */
     --page-loader-classic-bar-width: 200px;
     --page-loader-classic-bar-height: 10px;
-    --page-loader-classic-bar-background-color: inherit;
     --page-loader-classic-bar-image-data-url: none;
     --page-loader-classic-bar-image-size: 30px;
     --page-loader-classic-bar-background-color: #00a1e1;
