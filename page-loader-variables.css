@@ -1,6 +1,6 @@
 :root {
     /*---classic-bar-----------------------------------------------------*/
-    /* type input parameter: 'classic-bar' or 'page-loader-classic-bar' */
+    /* type input parameter: 'classic-bar' */
     --page-loader-classic-bar-width: 200px;
     --page-loader-classic-bar-height: 10px;
     --page-loader-classic-bar-background-color: inherit;
@@ -10,7 +10,7 @@
     --page-loader-classic-bar-location: bottom; /*top, right, bottom, left*/
 
     /*---icon-----------------------------------------------------*/
-    /* type input parameter: 'page-loader-icon' */
+    /* type input parameter: 'icon' or 'icon-X' */
     --page-loader-icon-top-position: 3px;
     --page-loader-icon-right-position: 40px;
     --page-loader-icon-bottom-position: unset;
@@ -22,7 +22,7 @@
     --page-loader-icon-background-color: transparent;
 
     /*---custom-----------------------------------------------------*/
-    /* type input parameter: 'page-loader-custom' */
+    /* type input parameter: 'custom' */
     --page-loader-custom-top-position: unset;
     --page-loader-custom-right-position: unset;
     --page-loader-custom-bottom-position: 3px;
