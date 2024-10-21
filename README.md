@@ -2,7 +2,7 @@
 
 A subtle animation at the bottom of the page just above the footer element indicates to the user that the page is busy fetching data from a database or web service. This repo allows you to customise the loader in a variety of ways. 
 
-https://github.com/user-attachments/assets/fdb090ee-ce30-43f9-a181-9b5b21a3abaa
+https://github.com/user-attachments/assets/67525736-11cf-4853-99c1-d4a236ef187f
 
 # Version
 1.1 - Added classic-bar-all-sides
