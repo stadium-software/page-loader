@@ -5,7 +5,7 @@ A subtle animation at the bottom of the page just above the footer element indic
 https://github.com/user-attachments/assets/fdb090ee-ce30-43f9-a181-9b5b21a3abaa
 
 # Version
-Initial 1.0
+1.1 - Added classic-bar-all-sides
 
 # Setup
 
@@ -46,10 +46,11 @@ container.appendChild(indicator);
 2. Drag the "PageLoader" script into the **first position (!!)** in the Page.Load event handler of any other page or template to change the loader. 
 3. Provide a value for the script *Type* input parameter
    1. classic-bar: Customise the standard Stadium bar loader
-   2. icon-X: Use an animated icon shown the image below
-   3. icon: Use your [own animated icon](#adding-your-own-icon)
-   4. custom: Choose and animate your own icon by writing a CSS animation (see sample application)
-   5. spinner-type-X: [Use any Spinner](#using-a-spinner) from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
+   2. classic-bar-all-sides: The classic bar loader moving around the entire page
+   3. icon-X: Use an animated icon shown the image below
+   4. icon: Use your [own animated icon](#adding-your-own-icon)
+   5. custom: Choose and animate your own icon by writing a CSS animation (see sample application)
+   6. spinner-type-X: [Use any Spinner](#using-a-spinner) from the [Spinners](https://github.com/stadium-software/spinners) repo (see [Using a Spinner](#using-a-spinner))
 4. Use the variables in the [*page-loader-variables.css*](page-loader-variables.css) file to customise the loader ([see below](#page-loader-customisations))
 
 ![](images/LoaderOptions.gif)
