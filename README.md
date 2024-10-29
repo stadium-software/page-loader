@@ -77,7 +77,16 @@ To upgrade the CSS in this module, follow the [steps outlined in this repo](http
 To display your own icon, you need to Base64-encode the image
 
 **Base64 Encoding**
-1. Some icon sites (e.g. https://icones.js.org/collection/all) provide this as a standard download option (select "Data Url" from the option buttons in this example)
+1. Some icon sites (e.g. https://icones.js.org/collection/all) provide this as a standard download option 
+   1. Select "Data Url" from the option buttons in this example
+   2. Wrap the DataUrl in double quotes as shown below
+
+```CSS
+background-image: url("DATAURL"); /*wrap the value in double quotes*/
+```
+
+OR
+
 2. Convert any image to a Base64 encoded string here https://base64.guru/ (choose "Data URI" or "CSS Background" from the "Output options" dropdown)
 
 ## Using a Spinner
